@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Footwear Collection - Izaan Footcare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+
+</head>
+
+<body>
+
+<!-- ===== BANNER START ===== -->
+<div class="banner">
+
+    <!-- LOGIN / AUTH AREA (JS CONTROLLED) -->
+    <div class="banner-actions">
+        <div id="authArea"></div>
+    </div>
+
+    <!-- IMAGE SLIDE -->
+    <div class="slides active banner-image-slide">
+        <img src="assets/images/izaanfootcarebanner.jpg" alt="Izaan Footcare Banner">
+    </div>
+
+    <div class="slides">
+        <h2>Izaan Footcare</h2>
+        <p>Comfort • Style • Quality</p>
+    </div>
+
+    <div class="slides">
+        <h2>New Arrivals</h2>
+        <p>Best footwear for daily comfort</p>
+    </div>
+
+    <div class="slides">
+        <h2>Order on WhatsApp</h2>
+        <p>Fast & easy ordering</p>
+        <a href="tel:9890222052" class="banner-phone">
+            📞 9890222052
+        </a>
+    </div>
+
+</div>
+
+<!-- ===== FILTER ===== -->
+<div class="filter-box">
+    <input type="text" id="searchInput" placeholder="Search footwear...">
+    <input type="number" id="minPrice" placeholder="Min ₹">
+    <input type="number" id="maxPrice" placeholder="Max ₹">
+    <button id="filterBtn">Filter</button>
+</div>
+
+<!-- ===== CATEGORY SECTION ===== -->
+<div class="category-section">
+
+    <!-- KIDS -->
+    <div class="category">
+        <button class="main-category" onclick="toggleSub('kids-sub')">
+            👶 Kids
+        </button>
+        <div class="subcategory" id="kids-sub">
+            <button onclick="filterCategory('kids','shoes')">Kids Shoes</button>
+            <button onclick="filterCategory('kids','slipper')">Kids Slipper</button>
+            <button onclick="filterCategory('kids','chappal')">Kids Chappal</button>
+            <button onclick="filterCategory('kids','sandal')">Kids Sandal</button>
+        </div>
+    </div>
+
+    <!-- WOMENS -->
+    <div class="category">
+        <button class="main-category" onclick="toggleSub('womens-sub')">
+            👩 Womens
+        </button>
+        <div class="subcategory" id="womens-sub">
+            <button onclick="filterCategory('womens','shoes')">Womens Shoes</button>
+            <button onclick="filterCategory('womens','slipper')">Womens Slipper</button>
+            <button onclick="filterCategory('womens','chappal')">Womens Chappal</button>
+            <button onclick="filterCategory('womens','sandal')">Womens Sandal</button>
+        </div>
+    </div>
+
+    <!-- MENS -->
+    <div class="category">
+        <button class="main-category" onclick="toggleSub('mens-sub')">
+            👨 Mens
+        </button>
+        <div class="subcategory" id="mens-sub">
+            <button onclick="filterCategory('mens','shoes')">Mens Shoes</button>
+            <button onclick="filterCategory('mens','slipper')">Mens Slipper</button>
+            <button onclick="filterCategory('mens','chappal')">Mens Chappal</button>
+            <button onclick="filterCategory('mens','sandal')">Mens Sandal</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- ===== VIEW ALL ===== -->
+<div class="view-all-wrapper">
+    <button class="view-all-btn" onclick="viewAllProducts()">
+        View All Products
+    </button>
+</div>
+
+<!-- ===== PRODUCT LIST ===== -->
+<div id="product-list" style="display:flex; flex-wrap:wrap;"></div>
+
+<!-- ===== SCRIPTS ===== -->
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/products.js"></script>
+<script src="js/banner.js"></script>
+<script type="module" src="js/customer-status.js"></script>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a href="https://wa.me/919890222052"
+   class="floating-whatsapp"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+   💬
+</a>
+
+<!-- ===== FOOTWEAR SLIDER SECTION ===== -->
+<section class="footwear-slider">
+  <h2 class="slider-title">Explore Our Footwear Collection</h2>
+
+  <div class="slider-container">
+    <div class="slider-track">
+      <img src="assets/slider/shoe1.jpeg">
+      <img src="assets/slider/shoe2.jpeg">
+      <img src="assets/slider/shoe3.jpeg">
+      <img src="assets/slider/shoe4.jpeg">
+      <img src="assets/slider/shoe5.jpeg">
+
+      <!-- duplicate for smooth loop -->
+      <img src="assets/slider/shoe1.jpeg">
+      <img src="assets/slider/shoe2.jpeg">
+      <img src="assets/slider/shoe3.jpeg">
+      <img src="assets/slider/shoe4.jpeg">
+      <img src="assets/slider/shoe5.jpeg">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== PREMIUM FOOTER ===== -->
+<footer class="site-footer dark-footer">
+    <div class="footer-inner">
+
+        <p class="footer-story">
+            From the latest trends to timeless classics, <strong>Izaan Footcare</strong>
+            blends modern design with dependable craftsmanship. Every pair is created
+            to deliver comfort, durability, and confidence—so you can move forward
+            through every occasion with ease.
+        </p>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-info">
+            <p>📍 <strong>Address:</strong> Izaan Footcare, Tehsil Road, Kannad, Aurangabad, Maharashtra</p>
+            <p>📞 <strong>Call:</strong> <a href="tel:9890222052">9890222052</a></p>
+            <p>💬 <strong>WhatsApp:</strong>
+                <a href="https://wa.me/919890222052" target="_blank">
+                    Chat with us
+                </a>
+            </p>
+        </div>
+
+        <div class="footer-brand">
+            IZAAN FOOTCARE
+        </div>
+
+        <p class="footer-copy">
+            © 2025 Izaan Footcare. Crafted with care for every step.
+        </p>
+
+    </div>
+</footer>
+
+
+</body>
+</html>

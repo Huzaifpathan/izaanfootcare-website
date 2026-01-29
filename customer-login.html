@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Login</title>
+
+    <!-- Main CSS (optional if needed globally) -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Customer Login Specific CSS -->
+    <link rel="stylesheet" href="css/customer-login.css">
+</head>
+
+<body>
+
+<!-- ===== CENTERED LOGIN SECTION ===== -->
+<div class="login-page">
+
+    <div class="login-card">
+
+        <h2>Customer Login</h2>
+        <p class="login-subtitle">Access your Izaan Footcare account</p>
+
+        <!-- Inputs (IDs unchanged) -->
+        <input type="text" id="name" placeholder="Full Name (for registration)">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <!-- Buttons (IDs unchanged) -->
+        <button type="button" id="loginBtn">Login</button>
+        <button type="button" id="registerBtn" class="secondary-btn">
+            Register
+        </button>
+
+        <!-- Status message -->
+        <p id="status"></p>
+
+    </div>
+
+</div>
+
+<!-- AUTH SCRIPT (UNCHANGED) -->
+<script type="module" src="js/customer-auth.js"></script>
+
+</body>
+</html>

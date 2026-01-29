@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - Izaan Footcare</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Admin Panel UI CSS -->
+    <link rel="stylesheet" href="css/admin-panel.css">
+</head>
+
+<body>
+
+<!-- ===== CENTERED ADMIN PANEL ===== -->
+<div class="admin-page">
+
+    <div class="admin-card">
+
+        <h2>Admin Panel</h2>
+        <p class="admin-subtitle">Add New Footwear Product</p>
+
+        <!-- Logout -->
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+
+        <!-- Product Inputs (IDs unchanged) -->
+        <input type="text" id="name" placeholder="Product Name">
+        <input type="number" id="price" placeholder="Price">
+        <textarea id="description" placeholder="Description"></textarea>
+        <input type="text" id="imageURL" placeholder="Image URL (Imgur later)">
+
+        <!-- Category -->
+        <select id="category">
+            <option value="">Select Category</option>
+            <option value="kids">Kids</option>
+            <option value="womens">Womens</option>
+            <option value="mens">Mens</option>
+        </select>
+
+        <!-- Subcategory -->
+        <select id="subcategory">
+            <option value="">Select Subcategory</option>
+            <option value="shoes">Shoes</option>
+            <option value="slipper">Slipper</option>
+            <option value="chappal">Chappal</option>
+            <option value="sandal">Sandal</option>
+        </select>
+
+        <!-- Add Product -->
+        <button id="addProduct" class="add-btn">Add Product</button>
+
+        <!-- Status -->
+        <p id="status"></p>
+
+    </div>
+
+</div>
+
+<!-- ADMIN SCRIPT (UNCHANGED) -->
+<script type="module" src="js/admin.js"></script>
+
+</body>
+</html>
